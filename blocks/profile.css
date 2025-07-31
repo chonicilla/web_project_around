@@ -1,0 +1,35 @@
+.profile {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.profile__image img {
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #777070;
+}
+
+.profile__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile__name-edit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile__name {
+  margin: 0;
+  font-size: 40px;
+}
+
+.profile__role {
+  margin: 0;
+  font-size: 1rem;
+}

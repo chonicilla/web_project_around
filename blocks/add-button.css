@@ -1,0 +1,9 @@
+.add-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.add-button:hover .add-icon {
+  opacity: 50%;
+}

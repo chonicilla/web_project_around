@@ -1,0 +1,35 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+  color: rgba(0, 0, 0, 1);
+}
+
+.gallery__container {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.gallery__info {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.gallery__place-name {
+  font-size: 1.25rem;
+  font-family: "Inter Black";
+  font-weight: lighter;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.gallery__like-button,
+.gallery__like-button-center {
+  background-color: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+}

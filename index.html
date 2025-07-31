@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Constanza Espinoza" />
+    <meta
+      name="keywords"
+      content="Aroun the U.S., Jacques Cousteau, Explorador, Valle de Yosemite, Lago Louise, Montañas Calvas, Latemar, Vanois National, Lago di Braies"
+    />
+    <meta
+      name="description"
+      content="Crea tu propia galería con hermosas fotografías de tus lugares favoritos en U.S."
+    />
+    <title>Around The U.S.</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          class="header__logo"
+          src="./images/around-the-us-logo.svg"
+          alt="Logo Around The U.S."
+        />
+        <h1 class="header__hidden-h1">Around The U.S.</h1>
+      </header>
+
+      <main class="content">
+        <section class="profile">
+          <div class="profile__image">
+            <img
+              src="./images/profile-photo.png"
+              alt="Icono perfil de usuario"
+            />
+          </div>
+          <div class="profile__info">
+            <div class="profile__name-edit">
+              <h2 class="profile__name">Jacques Cousteau</h2>
+              <button id="openPopup" class="edit-button">
+                <svg
+                  id="editButton"
+                  class="pencil-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect x="0.5" y="0.5" width="23" height="23" stroke="white" />
+                  <path
+                    d="M17 8.32827L9.60377 15.7666L8.28302 14.4194L15.6604 7L17 8.32827ZM7 17L8.96226 16.4118L7.58491 15.0835L7 17Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p class="profile__role">Explorador</p>
+          </div>
+
+          <button class="add-button">
+            <svg
+              class="add-icon"
+              width="150"
+              height="50"
+              viewBox="0 0 150 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="1"
+                y="1"
+                width="148"
+                height="48"
+                rx="1"
+                stroke="white"
+                stroke-width="2"
+              />
+              <path
+                d="M86 23.7778H76.2222V14H73.7778V23.7778H64V26.2222H73.7778V36H76.2222V26.2222H86V23.7778Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </section>
+
+        <section class="gallery">
+          <div class="gallery__container">
+            <img
+              class="gallery__image"
+              src="./images/gallery-1.png"
+              alt="Valle de Yosemite foto"
+            />
+            <div class="gallery__info">
+              <h3 class="gallery__place-name">Valle de Yosemite</h3>
+
+              <button class="like-button">
+                <svg
+                  class="heart-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="gallery__container">
+            <img
+              class="gallery__image"
+              src="./images/gallery-2.png"
+              alt="Lago Louise foto"
+            />
+            <div class="gallery__info">
+              <h3 class="gallery__place-name">Lago Louise</h3>
+              <button class="like-button">
+                <svg
+                  class="heart-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="gallery__container">
+            <img
+              class="gallery__image"
+              src="./images/gallery-3.png"
+              alt="Montañas Calvas foto"
+            />
+            <div class="gallery__info">
+              <h3 class="gallery__place-name">Montañas Calvas</h3>
+              <button class="like-button">
+                <svg
+                  class="heart-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="gallery__container">
+            <img
+              class="gallery__image"
+              src="./images/gallery-4.png"
+              alt="Latemar foto"
+            />
+            <div class="gallery__info">
+              <h3 class="gallery__place-name">Latemar</h3>
+              <button class="like-button">
+                <svg
+                  class="heart-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="gallery__container">
+            <img
+              class="gallery__image"
+              src="./images/gallery-5.png"
+              alt="Vanois National foto"
+            />
+            <div class="gallery__info">
+              <h3 class="gallery__place-name">Parque Nacional de la Vanoise</h3>
+              <button class="like-button">
+                <svg
+                  class="heart-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="gallery__container">
+            <img
+              class="gallery__image"
+              src="./images/gallery-6.png"
+              alt="Lago di Braies foto"
+            />
+            <div class="gallery__info">
+              <h3 class="gallery__place-name">Lago di Braies</h3>
+              <button class="like-button">
+                <svg
+                  class="heart-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="popUp" class="popup">
+          <button class="popup__close-button">
+            <svg
+              class="popup__close-icon"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M28.5708 0.286517L16 12.8573L3.42918 0.286515L0.286486 3.42921L12.8573 16L0.286486 28.5708L3.42918 31.7135L16 19.1427L28.5708 31.7135L31.7135 28.5708L19.1427 16L31.7135 3.42921L28.5708 0.286517Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <div class="popup__edit-profile">
+            <h2 class="popup__title">Editar perfil</h2>
+            <form action="#" method="post" class="popup__form">
+              <div class="popup__form-sentence">
+                <label for="name"></label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Nombre"
+                />
+              </div>
+              <div class="popup__form-sentence">
+                <label for="about-me"></label>
+                <input
+                  type="text"
+                  id="about-me"
+                  name="about-me"
+                  placeholder="Acerca de mí"
+                />
+              </div>
+            </form>
+            <button type="submit" id="saveButton" class="popup__save-button">
+              Guardar
+            </button>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2025 Constanza Espinoza</p>
+      </footer>
+
+      <script src="./scripts/script.js"></script>
+    </div>
+  </body>
+</html>

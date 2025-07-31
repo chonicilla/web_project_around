@@ -1,0 +1,9 @@
+.header {
+  height: 74px;
+  border-bottom: 1px solid #333;
+  margin: 40px 0;
+}
+.header__hidden-h1 {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 1);
+}

@@ -1,0 +1,14 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 1);
+  font-family: "Inter Regular";
+}
+
+.page {
+  margin: 0 auto;
+  color: white;
+  max-width: 880px;
+}

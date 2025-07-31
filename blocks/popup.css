@@ -1,0 +1,85 @@
+.popup {
+  max-width: 450px;
+  position: fixed;
+  z-index: 1000;
+  left: 730px;
+  top: 200px;
+}
+
+.popup__close-button {
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+
+}
+
+.popup__edit-profile {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  width: 430px;
+  color: black;
+}
+
+.popup__title {
+  font-size: 2rem;
+  font-family: 'Inter Black';
+  font-weight: lighter;
+  margin-bottom: 15%;
+}
+
+.popup__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__form-sentence {
+  margin-bottom: 15%;
+}
+
+.popup__form-sentence input[type="text"] {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+}
+
+.popup__save-button {
+  background: none;
+  padding: 15px 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  color: #ccc;
+}
+
+.popup__save-button:hover {
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.popup__close-button {
+  background: none;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,32 @@
+.like-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.like-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.like-button .heart-icon {
+    width: 30px;
+    height: 30px;
+    stroke: rgba(0, 0, 0, 1);
+    fill: none;
+}
+
+.like-button:hover .heart-icon {
+    opacity: 50%;
+}
+
+.like-button.liked .heart-icon {
+    fill: rgba(0, 0, 0, 1);
+    stroke: rgba(0, 0, 0, 1);
+}
