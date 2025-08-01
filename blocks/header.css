@@ -1,9 +1,30 @@
 .header {
   height: 74px;
   border-bottom: 1px solid #333;
-  margin: 40px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  margin: 40px 0px;
 }
 .header__hidden-h1 {
   font-size: 1rem;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(5, 5, 5);
+}
+.header__logo {
+  width: 173px;
+  height: 33px;
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+   margin-top: 30px;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-bottom: 0;
+  }
+
+  .header__logo {
+  width: 126px;
+  height: 24px;
+}
 }

@@ -247,6 +247,7 @@
         </section>
 
         <section id="popUp" class="popup">
+          <div class="popup__overlay"></div>
           <button class="popup__close-button">
             <svg
               class="popup__close-icon"
@@ -283,18 +284,18 @@
                   placeholder="Acerca de mí"
                 />
               </div>
-            </form>
-            <button type="submit" id="saveButton" class="popup__save-button">
+              <button type="submit" id="saveButton" class="popup__save-button" disabled>
               Guardar
             </button>
+            </form>
+
           </div>
         </section>
       </main>
       <footer class="footer">
         <p class="footer__copyright">&copy; 2025 Constanza Espinoza</p>
       </footer>
-
-      <script src="./scripts/script.js"></script>
     </div>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
