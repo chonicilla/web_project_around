@@ -27,7 +27,7 @@
 }
 
 .gallery__container:hover {
-  filter: brightness(0.6);
+  filter: brightness(0.9);
 }
 
 .gallery__info {
