@@ -8,8 +8,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
 }
 
 .popup__overlay {
@@ -48,7 +46,7 @@
 
 .popup__title {
   font-size: 2rem;
-  font-family: 'Inter Black';
+  font-family: "Inter Black";
   font-weight: lighter;
   margin-bottom: 15%;
 }
@@ -91,4 +89,135 @@
   background-color: #e6e6e6;
   color: #a0a0a0;
   cursor: not-allowed !important;
+}
+
+@media screen and (max-width: 768px) {
+  .popup {
+    width: 50%;
+    height: 50%;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+}
+/* .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.popup__close-button {
+  background: none;
+  cursor: pointer;
+  border: none;
+  z-index: 1002;
+  margin-bottom: 20px;
+}
+
+.popup__edit-profile {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  width: 430px;
+  color: black;
+  position: relative;
+  z-index: 1001;
+}
+
+.popup.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__title {
+  font-size: 2rem;
+  font-family: "Inter Black";
+  font-weight: lighter;
+  margin-bottom: 15%;
+}
+
+.popup__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__form-sentence {
+  margin-bottom: 15%;
+}
+
+.popup__form-sentence input[type="text"] {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+}
+
+.popup__save-button {
+  background: none;
+  padding: 15px 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  color: #ccc;
+}
+
+.popup__save-button:not([disabled]):hover {
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+}
+
+.popup__save-button[disabled] {
+  background-color: #e6e6e6;
+  color: #a0a0a0;
+  cursor: not-allowed !important;
+}
+
+@media screen and (max-width: 768px) {
+  .popup {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popup__edit-profile {
+    width: 240px;
+    padding: 25px 22px;
+  }
+
+  .popup__title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .popup__close-button {
+    margin-bottom: 13px;
+  }
+
+  .popup__close-icon {
+    width: 26px;
+    height: 26px;
+  }
 }

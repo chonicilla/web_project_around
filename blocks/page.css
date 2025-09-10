@@ -8,7 +8,13 @@ body {
 }
 
 .page {
-  max-width: 880px;
+  max-width: 80%;
   margin: 0 auto;
   color: white;
+
+}
+@media screen and (max-width: 320px) {
+  .page {
+    max-width: 100%;
+  }
 }

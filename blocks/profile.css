@@ -1,8 +1,8 @@
 .profile {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  gap: 20px;
-  align-items: center;
+  gap: 10px;
+  align-items: flex-start;
   margin-bottom: 50px;
 }
 
@@ -40,6 +40,17 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__name {
+    font-size: 30px;
+  }
+
+  .profile__image img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 @media screen and (max-width: 320px) {

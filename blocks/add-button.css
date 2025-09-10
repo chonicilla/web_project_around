@@ -1,9 +1,32 @@
 .add-button {
-  background: none;
-  border: none;
+  background-color: transparent;
+  border: 2px solid white;
   cursor: pointer;
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-weight: 500;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.add-button:hover .add-icon {
+.add-button:hover  {
   opacity: 50%;
+}
+
+@media screen and (max-width: 768px) {
+ .add-button {
+  width: 100px;
+  height: 40px;
+  font-size: 30px;
+ }
+}
+
+@media screen and (max-width: 320px) {
+ .add-button {
+  width: 100%;
+  height: 30px;
+ }
 }
