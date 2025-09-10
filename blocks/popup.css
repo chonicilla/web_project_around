@@ -92,15 +92,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .popup {
-    width: 50%;
-    height: 50%;
+  .popup__edit-profile {
+    width: 240px;
+    padding: 25px 22px;
   }
 
 }
 
-@media screen and (max-width: 320px) {
-}
 /* .popup {
   position: fixed;
   top: 50%;
