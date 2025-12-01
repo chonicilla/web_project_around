@@ -60,21 +60,15 @@
           </div>
 
           <button class="add-button" id="openAdd">
-            <P class="add-icon">+</P>
+            <p class="add-icon">+</p>
           </button>
         </section>
 
-        <section class="gallery-place">
-
-        </section>
+        <section class="gallery-place"></section>
 
         <template id="card-template">
           <div class="gallery__container">
-            <img
-              class="gallery__image"
-              src=""
-              alt=""
-            />
+            <img class="gallery__image" src="" alt="" />
             <button class="trash-button">
               <svg
                 class="trash-icon"
@@ -97,8 +91,19 @@
             <div class="gallery__info">
               <h3 class="gallery__place-name"></h3>
               <button class="like-button">
-                <svg class="heart-icon" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.3764 9.78586C21.5412 7.54338 21.5412 3.90213 19.3764 1.68186C17.2115 -0.560619 13.6964 -0.560619 11.5315 1.68186L10.4812 2.792L9.43098 1.70406C7.26614 -0.560619 3.75096 -0.560619 1.60755 1.68186C0.557285 2.76979 0 4.21297 0 5.74496C0 7.27695 0.578719 8.72013 1.60755 9.80806L10.4812 19L19.3764 9.78586Z" fill="black"/>
+                <svg
+                  class="heart-icon"
+                  width="21"
+                  height="19"
+                  viewBox="0 0 21 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.5 18.5L9.57945 17.618C4.50742 12.7214 1 9.3879 1 5.375C1 2.96699 2.96699 1 5.375 1C7.03901 1 8.63412 1.83855 9.57945 3.01891L10.5 4.16892L11.4205 3.01891C12.3659 1.83855 13.961 1 15.625 1C18.033 1 20 2.96699 20 5.375C20 9.3879 16.4926 12.7214 11.4205 17.618L10.5 18.5Z"
+                    stroke="black"
+                    stroke-width="2"
+                  />
                 </svg>
               </button>
             </div>
@@ -132,8 +137,15 @@
                   id="nombre"
                   name="nombre"
                   placeholder="Nombre"
-                  maxlength="50"
+                  maxlength="40"
+                  minlength="2"
+                  required
                 />
+                <span
+                  class="error-message"
+                  id="nombre-error"
+                  aria-live="polite"
+                ></span>
               </div>
               <div class="popup__form-sentence">
                 <label for="about-me"></label>
@@ -142,14 +154,25 @@
                   id="about-me"
                   name="about-me"
                   placeholder="Acerca de mí"
-                  maxlength="150"
+                  maxlength="200"
+                  minlength="2"
+                  required
                 />
+                <span
+                  class="error-message"
+                  id="about-me-error"
+                  aria-live="polite"
+                ></span>
               </div>
-              <button type="submit" id="saveButton" class="popup__save-button" disabled>
-              Guardar
-            </button>
+              <button
+                type="submit"
+                id="saveButton"
+                class="popup__save-button"
+                disabled
+              >
+                Guardar
+              </button>
             </form>
-
           </div>
         </section>
 
@@ -173,7 +196,12 @@
           </button>
           <div class="popup__edit-profile">
             <h2 class="popup__title">Nueva foto</h2>
-            <form action="#" method="post" class="popup__form" id="addPhotoForm">
+            <form
+              action="#"
+              method="post"
+              class="popup__form"
+              id="addPhotoForm"
+            >
               <div class="popup__form-sentence">
                 <label for="photo-title"></label>
                 <input
@@ -182,8 +210,14 @@
                   name="photo-title"
                   placeholder="Título"
                   maxlength="50"
+                  minlength="2"
                   required
                 />
+                <span
+                  class="error-message"
+                  id="text-error"
+                  aria-live="polite"
+                ></span>
               </div>
               <div class="popup__form-sentence">
                 <label for="photo-url"></label>
@@ -194,8 +228,18 @@
                   placeholder="URL de la imagen"
                   required
                 />
+                <span
+                  class="url-message"
+                  id="nombre-error"
+                  aria-live="polite"
+                ></span>
               </div>
-              <button type="submit" id="addPhotoButton" class="popup__save-button" disabled>
+              <button
+                type="submit"
+                id="addPhotoButton"
+                class="popup__save-button"
+                disabled
+              >
                 Crear
               </button>
             </form>

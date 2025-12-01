@@ -1,23 +1,27 @@
 .like-button {
-    background: none;
-    border: none;
-    cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  padding: 0;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
 .like-button .heart-icon {
-    width: 21px;
-    height: 19px;
-    stroke: rgba(0, 0, 0, 1);
-    fill: none;
-    transition: all 0.3s ease;
+  width: 21px;
+  height: 19px;
+  fill: none;
+  transition: fill 0.3s ease;
 }
 
 .like-button:hover .heart-icon {
-    fill: rgba(0, 0, 0, 1);
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 .like-button.liked .heart-icon {
-    fill: rgba(0, 0, 0, 1);
-    stroke: rgba(0, 0, 0, 1);
+  fill: rgba(0, 0, 0, 1);
+  stroke: rgba(0, 0, 0, 1);
 }
