@@ -1,6 +1,6 @@
-import Card from "./Card.js";
-import FormValidator from "./FormValidator.js";
-import { openPopup, closePopup } from "./utils.js";
+import Card from "./scripts/Card.js";
+import FormValidator from "./scripts/FormValidator.js";
+import { openPopup, closePopup } from "./scripts/utils.js";
 
 const config = {
   inputSelector: "input",
