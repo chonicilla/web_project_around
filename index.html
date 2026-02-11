@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -244,12 +244,36 @@
             </form>
           </div>
         </section>
+
+        <section id="imageViewer" class="popup">
+          <div class="popup__overlay"></div>
+          <button class="popup__close-button">
+            <svg
+              class="popup__close-icon"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M28.5708 0.286517L16 12.8573L3.42918 0.286515L0.286486 3.42921L12.8573 16L0.286486 28.5708L3.42918 31.7135L16 19.1427L28.5708 31.7135L31.7135 28.5708L19.1427 16L31.7135 3.42921L28.5708 0.286517Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <div class="popup__edit-profile">
+            <figure style="margin:0">
+              <img class="viewer__image" src="" alt="" style="max-width:100%; height:auto; display:block" />
+              <figcaption class="viewer__caption" style="margin-top:10px; color:black"></figcaption>
+            </figure>
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <p class="footer__copyright">&copy; 2025 Constanza Espinoza</p>
       </footer>
     </div>
-    <script src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
-<!-- final -->
