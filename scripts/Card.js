@@ -7,7 +7,6 @@ export default class Card {
     this._cardSelector = cardSelector;
   }
 
-  // Método privado para obtener el marcado del template
   _getTemplate() {
     return document
       .querySelector(this._cardSelector)
@@ -15,7 +14,6 @@ export default class Card {
       .cloneNode(true);
   }
 
-  // Métodos privados para controladores de eventos
   _handleLikeIcon() {
     this._element.querySelector(".like-button").classList.toggle("liked");
   }
@@ -25,7 +23,6 @@ export default class Card {
     this._element = null;
   }
 
-  // Método privado para añadir detectores de eventos
   _setEventListeners() {
     this._element
       .querySelector(".like-button")
@@ -45,7 +42,6 @@ export default class Card {
     });
   }
 
-  // Método público que devuelve el elemento funcional
   generateCard() {
     this._element = this._getTemplate();
     this._setEventListeners();

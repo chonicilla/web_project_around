@@ -7,7 +7,6 @@ const config = {
   submitButtonSelector: ".popup__save-button",
 };
 
-// Instancias de validación
 const editProfileForm = document.querySelector("#popUp .popup__form");
 const addCardForm = document.querySelector("#addPhotoForm");
 
@@ -17,13 +16,11 @@ const addValidator = new FormValidator(config, addCardForm);
 editValidator.enableValidation();
 addValidator.enableValidation();
 
-// Lógica de Renderizado
 const initialCards = [
   {
     name: "Valle de Yosemite",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg",
   },
-  // ... resto de tus tarjetas
 ];
 
 const gallery = document.querySelector(".gallery-place");
@@ -33,7 +30,6 @@ initialCards.forEach((item) => {
   gallery.append(card.generateCard());
 });
 
-// Eventos de apertura
 document.getElementById("openPopup").addEventListener("click", () => {
   editValidator.resetValidation();
   openPopup(document.getElementById("popUp"));
@@ -45,7 +41,6 @@ document.getElementById("openAdd").addEventListener("click", () => {
   openPopup(document.getElementById("addPhotoPopup"));
 });
 
-// Cierres
 document.querySelectorAll(".popup__close-button").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const popup = e.target.closest(".popup");
@@ -60,7 +55,6 @@ document.querySelectorAll(".popup__overlay").forEach((overlay) => {
   });
 });
 
-// Crear nueva tarjeta desde el formulario
 addCardForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const title = document.getElementById("photo-title").value.trim();
@@ -72,7 +66,6 @@ addCardForm.addEventListener("submit", (e) => {
   addValidator.resetValidation();
 });
 
-// Actualizar perfil desde el formulario
 editProfileForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.getElementById("nombre").value.trim();

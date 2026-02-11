@@ -3,16 +3,16 @@ export default class FormValidator {
     this._settings = settings;
     this._formElement = formElement;
     this._inputList = Array.from(
-      this._formElement.querySelectorAll(this._settings.inputSelector)
+      this._formElement.querySelectorAll(this._settings.inputSelector),
     );
     this._buttonElement = this._formElement.querySelector(
-      this._settings.submitButtonSelector
+      this._settings.submitButtonSelector,
     );
   }
 
   _showInputError(inputElement, errorMessage) {
     const errorElement = this._formElement.querySelector(
-      `#${inputElement.id}-error`
+      `#${inputElement.id}-error`,
     );
     inputElement.style.borderBottomColor = "red";
     if (errorElement) errorElement.textContent = errorMessage;
@@ -20,13 +20,12 @@ export default class FormValidator {
 
   _hideInputError(inputElement) {
     const errorElement = this._formElement.querySelector(
-      `#${inputElement.id}-error`
+      `#${inputElement.id}-error`,
     );
     inputElement.style.borderBottomColor = "";
     if (errorElement) errorElement.textContent = "";
   }
 
-  // Método privado: Comprobar validez del campo
   _checkInputValidity(inputElement) {
     if (!inputElement.validity.valid) {
       this._showInputError(inputElement, inputElement.validationMessage);
@@ -35,7 +34,6 @@ export default class FormValidator {
     }
   }
 
-  // Método privado: Cambiar estado del botón Submit
   _toggleButtonState() {
     if (this._hasInvalidInput()) {
       this._buttonElement.setAttribute("disabled", "disabled");
@@ -50,13 +48,11 @@ export default class FormValidator {
     return this._inputList.some((input) => !input.validity.valid);
   }
 
-  // Método público: Activa la validación
   enableValidation() {
     this._formElement.addEventListener("submit", (evt) => evt.preventDefault());
     this._setEventListeners();
   }
 
-  // Método privado: Agrega controladores
   _setEventListeners() {
     this._toggleButtonState();
     this._inputList.forEach((inputElement) => {
@@ -67,7 +63,6 @@ export default class FormValidator {
     });
   }
 
-  // Método extra para resetear errores al abrir modales
   resetValidation() {
     this._toggleButtonState();
     this._inputList.forEach((input) => {
