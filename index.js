@@ -1,6 +1,9 @@
 import Card from "./scripts/Card.js";
 import FormValidator from "./scripts/FormValidator.js";
-import { openPopup, closePopup } from "./scripts/utils.js";
+import Section from "./components/Section.js";
+import PopupWithImage from "./components/PopupWithImage.js";
+import PopupWithForm from "./components/PopupWithForm.js";
+import UserInfo from "./components/UserInfo.js";
 
 const config = {
   inputSelector: "input",
@@ -23,56 +26,64 @@ const initialCards = [
   },
 ];
 
-const gallery = document.querySelector(".gallery-place");
+const imagePopup = new PopupWithImage("#imageViewer");
+imagePopup.setEventListeners();
 
-initialCards.forEach((item) => {
-  const card = new Card(item, "#card-template");
-  gallery.append(card.generateCard());
+const createCard = (cardData) => {
+  const card = new Card(cardData, "#card-template", (name, link) => {
+    imagePopup.open(name, link);
+  });
+  return card.generateCard();
+};
+
+const cardSection = new Section(
+  {
+    items: initialCards,
+    renderer: (item) => {
+      const cardElement = createCard(item);
+      cardSection.addItem(cardElement);
+    },
+  },
+  ".gallery-place",
+);
+
+cardSection.renderItems();
+
+const userInfo = new UserInfo({
+  nameSelector: ".profile__name",
+  jobSelector: ".profile__role",
 });
 
+const profileFormPopup = new PopupWithForm("#popUp", (inputValues) => {
+  userInfo.setUserInfo({
+    name: inputValues["nombre"],
+    job: inputValues["about-me"],
+  });
+  profileFormPopup.close();
+});
+profileFormPopup.setEventListeners();
+
+const addCardFormPopup = new PopupWithForm("#addPhotoPopup", (inputValues) => {
+  const cardElement = createCard({
+    name: inputValues["photo-title"],
+    link: inputValues["photo-url"],
+  });
+  cardSection.addItem(cardElement);
+  addCardFormPopup.close();
+});
+addCardFormPopup.setEventListeners();
+
 document.getElementById("openPopup").addEventListener("click", () => {
+  const currentUserData = userInfo.getUserInfo();
+
+  document.getElementById("nombre").value = currentUserData.name;
+  document.getElementById("about-me").value = currentUserData.job;
+
   editValidator.resetValidation();
-  openPopup(document.getElementById("popUp"));
+  profileFormPopup.open();
 });
 
 document.getElementById("openAdd").addEventListener("click", () => {
-  addCardForm.reset();
   addValidator.resetValidation();
-  openPopup(document.getElementById("addPhotoPopup"));
-});
-
-document.querySelectorAll(".popup__close-button").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const popup = e.target.closest(".popup");
-    if (popup) closePopup(popup);
-  });
-});
-
-document.querySelectorAll(".popup__overlay").forEach((overlay) => {
-  overlay.addEventListener("click", (e) => {
-    const popup = e.target.closest(".popup");
-    if (popup) closePopup(popup);
-  });
-});
-
-addCardForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const title = document.getElementById("photo-title").value.trim();
-  const url = document.getElementById("photo-url").value.trim();
-  const newCard = new Card({ name: title, link: url }, "#card-template");
-  gallery.prepend(newCard.generateCard());
-  closePopup(document.getElementById("addPhotoPopup"));
-  addCardForm.reset();
-  addValidator.resetValidation();
-});
-
-editProfileForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const name = document.getElementById("nombre").value.trim();
-  const role = document.getElementById("about-me").value.trim();
-  document.querySelector(".profile__name").textContent = name;
-  document.querySelector(".profile__role").textContent = role;
-  closePopup(document.getElementById("popUp"));
-  editProfileForm.reset();
-  editValidator.resetValidation();
+  addCardFormPopup.open();
 });

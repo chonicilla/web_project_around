@@ -1,10 +1,9 @@
-import { openImageViewer } from "./utils.js";
-
 export default class Card {
-  constructor(data, cardSelector) {
+  constructor(data, cardSelector, handleCardClick) {
     this._name = data.name;
     this._link = data.link;
     this._cardSelector = cardSelector;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate() {
@@ -38,7 +37,7 @@ export default class Card {
 
     const image = this._element.querySelector(".gallery__image");
     image.addEventListener("click", () => {
-      openImageViewer(this._name, this._link);
+      this._handleCardClick(this._name, this._link);
     });
   }
 

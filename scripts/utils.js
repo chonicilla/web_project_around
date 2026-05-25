@@ -1,4 +1,4 @@
-export function openPopup(popup) {
+/*export function openPopup(popup) {
   popup.classList.add("show");
   document.addEventListener("keydown", handleEscClose);
 }
