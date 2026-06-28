@@ -1,11 +1,11 @@
-import Api from "./components/Api.js";
-import Card from "./scripts/Card.js";
-import Section from "./components/Section.js";
-import PopupWithImage from "./components/PopupWithImage.js";
-import PopupWithForm from "./components/PopupWithForm.js";
-import UserInfo from "./components/UserInfo.js";
-import FormValidator from "./scripts/FormValidator.js";
-import PopupWithConfirmation from "./components/PopupWithConfirmation.js";
+import Api from "../components/Api.js";
+import Card from "../../scripts/Card.js";
+import Section from "../components/Section.js";
+import PopupWithImage from "../components/PopupWithImage.js";
+import PopupWithForm from "../components/PopupWithForm.js";
+import UserInfo from "../components/UserInfo.js";
+import FormValidator from "../../scripts/FormValidator.js";
+import PopupWithConfirmation from "../components/PopupWithConfirmation.js";
 
 const config = {
   formSelector: ".popup__form",
