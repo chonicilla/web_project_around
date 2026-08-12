@@ -1,4 +1,4 @@
-import Api from "../components/Api.js";
+import api from "../utils/api.js";
 import Card from "../components/Card.js";
 import Section from "../components/Section.js";
 import PopupWithImage from "../components/PopupWithImage.js";
@@ -15,14 +15,6 @@ const config = {
   inputErrorClass: "popup__input_type_error",
   errorClass: "popup__error_visible",
 };
-
-const api = new Api({
-  baseUrl: "https://around-api.es.tripleten-services.com/v1",
-  headers: {
-    authorization: "7a5dae08-d271-436c-91c0-abb96f24854f",
-    "Content-Type": "application/json",
-  },
-});
 
 const userInfo = new UserInfo({
   nameSelector: ".profile__name",
