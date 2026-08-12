@@ -4,8 +4,15 @@ import CurrentUserContext from "../../contexts/CurrentUserContext.js";
 function Card({ card, onCardLike, onCardDelete, onCardClick }) {
   const { currentUser } = useContext(CurrentUserContext);
 
-  const isOwn = card.owner === currentUser._id;
-  const isLiked = card.isLiked;
+  const ownerId = typeof card.owner === "object" ? card.owner._id : card.owner;
+  const isOwn = ownerId === currentUser._id;
+  const isLiked =
+    card.isLiked === true ||
+    (Array.isArray(card.likes) &&
+      card.likes.some((u) => {
+        const uid = typeof u === "object" ? u._id : u;
+        return uid === currentUser._id;
+      }));
 
   const cardLikeButtonClassName = `card__like-button ${
     isLiked ? "card__like-button_is-active" : ""
@@ -54,10 +61,7 @@ function Card({ card, onCardLike, onCardDelete, onCardClick }) {
       )}
       <div className="gallery__info">
         <h3 className="gallery__place-name">{card.name}</h3>
-        <button
-          className={cardLikeButtonClassName}
-          onClick={handleLikeClick}
-        >
+        <button className={cardLikeButtonClassName} onClick={handleLikeClick}>
           <svg
             className="heart-icon"
             width="21"

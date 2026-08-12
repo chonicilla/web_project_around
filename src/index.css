@@ -1,0 +1,47 @@
+@import url('./styles/vendor/normalize.css');
+@import url('./styles/vendor/fonts.css');
+
+@import url('./styles/blocks/page.css');
+@import url('./styles/blocks/header.css');
+@import url('./styles/blocks/profile.css');
+@import url('./styles/blocks/gallery.css');
+@import url('./styles/blocks/footer.css');
+@import url('./styles/blocks/popup.css');
+@import url('./styles/blocks/edit-button.css');
+@import url('./styles/blocks/add-button.css');
+@import url('./styles/blocks/like-button.css');
+@import url('./styles/blocks/trash-button.css');
+
+.page__content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.card__like-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.card__like-button_is-active .heart-icon path {
+  fill: #000;
+}
+
+.card__like-count {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000;
+}
+
+.popup__button_disabled {
+  background-color: transparent !important;
+  border: 1px solid #000 !important;
+  color: #000 !important;
+  opacity: 0.2 !important;
+  cursor: not-allowed !important;
+}
